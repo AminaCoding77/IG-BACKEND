@@ -4,6 +4,7 @@ import cors from "cors";
 import userRouter from "./router/user.router.js";
 import postRouter from "./router/post.router.js";
 import dotenv from "dotenv";
+import commentRouter from "./router/comment.router.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ console.log(process.env.MONGO_URL);
 
 app.use("/", userRouter);
 app.use("/", postRouter);
+app.use("/", commentRouter);
 
 app.listen(PORT, () => {
   console.log("app chin ajiljiina");

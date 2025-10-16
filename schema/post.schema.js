@@ -9,7 +9,7 @@ const PostSchema = new mongoose.Schema({
     type: [{ type: Schema.Types.String, required: true }],
     required: true,
   },
-  comment: [{ type: Schema.Types.ObjectId, required: true }],
+  commentIds: [{ type: Schema.Types.ObjectId, ref: "comments" }],
   updatedAt: { type: Date, default: Date.now() },
   createdAt: { type: Date, default: Date.now() },
 });
