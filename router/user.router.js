@@ -7,5 +7,4 @@ const userRouter = express.Router();
 userRouter.post("/user/create", signup);
 userRouter.post("/login", login);
 userRouter.get("/StaData/:staId", StaData);
-
 export default userRouter;
